@@ -1,0 +1,45 @@
+ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+ local  Player = Game.Players.LocalPlayer
+ local Window = OrionLib:MakeWindow({Name = "Key System", HidePremium = false, SaveConfig = true, IntroEnabled = false
+
+ localTab = Window:MakeTab({
+	Name = "Key",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+ })
+
+
+
+ _G.Key = "1010-PVPOP;091I2J-APOSLF"
+ _G.KeyInput = "string"
+
+
+
+ OrionLib:MakeNotification({
+	Name = "Logged IN!!!!",
+	Content = "Logged In As Free User"..player.name.." ",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+ })
+
+
+
+ Tab:AddTextbox({
+	Name = "Enter Key",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+		_G.KeyInput = Value
+	end	  
+ })
+
+
+
+
+ Tab:AddButton({
+	Name = "Verify Key",
+	Callback = function()
+      		if _G.KeyInput == _G.key then
+            MakeScriptHub()
+            end
+  	end)}
